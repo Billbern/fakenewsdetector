@@ -85,12 +85,12 @@ function predictionReponse() {
             // console.error("Fake New Detection Failed: " + error);
             articleText.style.border = "3px solid red";
             resultBanner.style.color = "red";
-            resultBanner.textContent = "Authentication Failed;";
+            resultBanner.textContent = "Verification Failed;";
         });
     } else {
         articleText.style.border = "3px solid red";
         resultBanner.style.color = "red";
-        resultBanner.textContent = "no news to authenticate";
+        resultBanner.textContent = "no news to verify";
     }
 
 

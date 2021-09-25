@@ -43,6 +43,7 @@ def home():
     if "token" in request.cookies.keys():
         return redirect('/dashboard')
     else:
+        print(f'\n\n{os.environ.get("DATABASE_URL")}\n\n')
         return render_template('home.html')
 
 

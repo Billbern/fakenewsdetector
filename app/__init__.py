@@ -29,6 +29,11 @@ from app.models.article import Article
 
 try:
     db.create_all()
+    adminUser = User.query.filter_by(username="admin").first()
+    if not adminUser:
+        newAdmin = User("admin", "admin1234")
+        db.session.add(newAdmin)
+        db.session.commit()
 except Exception as e:
     print(f'\n\n Error {e} \n\n')
 

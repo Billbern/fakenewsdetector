@@ -1,0 +1,34 @@
+body {
+	padding: 0;
+	height: 100vh;
+	background-color: #f9fbfd;
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+}
+
+header{
+    color: #f0ca6c;
+    background-color: #5d00ff;
+}
+
+header span{
+    cursor: pointer;
+}
+
+.breadcrb{
+    color: #fff;
+    background-color: #7bb2c7;
+}
+
+.bottom-content{
+    padding-top: 48px;
+}
+
+
+table tbody td > p{
+    width: max-content;
+}
+
+
+/* 3f7a8f */
+/* 7bb2c7 */
+/* f0ca6c */

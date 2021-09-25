@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='/css/dashboard.css')}}">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between py-3">
+                <div>
+                    <h2 class="mb-0">Fake News Administration</h2>
+                </div>
+                <div>
+                    <span class="d-inline-block mx-3 " id="logout">
+                        Logout
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="breadcrb w-100 text-left py-2">
+            <div class="container">
+                <div>
+                    Home &CenterDot; News
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bottom-content">
+                <div class="py-3 mb-2">
+                    <h2 class="mb-0">Authenticated News</h2>
+                </div>
+                <div>
+                    <div class="row row-cols-12">
+                        <div class="col-9">
+                            <div class="w-100">
+                                <table class="w-100">
+                                    <thead>
+                                        <th>Id</th>
+                                        <th>Sender</th>
+                                        <th>Article</th>
+                                        <th>Authenticity</th>
+                                        <th>Date Added</th>
+                                    </thead>
+                                    <tbody id="datacontainer">
+                                        {% if articles | length > 0 %}
+                                            {% for article in articles %}
+                                                <tr>
+                                                    <td ><p class="py-3">{{ article.id }}</p></td>
+                                                    <td ><p class="py-3">{{ article.ip_address }}</p></td>
+                                                    <td ><p class="py-3">{{ article.text | truncate(40, true, '...') }}</p></td>
+                                                    <td ><p class="py-3">{{ article.authenticity }}</p></td>
+                                                    <td ><p class="py-3">{{ article.date_added }}</p></td>
+                                                </tr>
+                                            {% endfor %}
+                                        {% else %}
+                                            <div>
+                                                no data to display
+                                            </div>
+                                        {% endif %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="w-100">
+                                <div>
+                                    <div class="breadcrb px-2 py-1">
+                                        <h4 class="mb-0">User</h4>
+                                    </div>
+                                    <div class="pt-2 ps-2">
+                                        <div>Admin</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Boostrap cdn and utility methods -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{url_for('static', filename='/js/logout.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+body {
+	padding: 0;
+	height: 100vh;
+	background-color: #f9fbfd;
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+}
+
+header {
+	padding: 30px 0;
+	background-color: #fff;
+	border-bottom: #ebf1f8 1px solid;
+	box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.main-header {
+	text-align: center;
+	background-color: #03a9f4;
+	width: 100%;
+	margin: 0;
+}
+
+.brandname {
+	color: hsl(0, 2%, 8%);
+	text-align: center;
+	font-size: 30px;
+	margin: 10px;
+}
+
+.text-bl{
+	color:#345fe4;
+}
+
+header h2 {
+	color: #fff;
+	text-align: center;
+}
+
+.flash-message{
+	width: 240px;
+	height: 24px;
+	color: red;
+}
+
+.results {
+	border-radius: 15px 50px;
+	background: #345fe4;
+	padding: 20px;
+	width: 200px;
+	height: 150px;
+}
+
+.predict-button {
+	cursor: pointer;
+	padding: 10px 36px;
+	border-radius: 4px;
+	font-family: 'Monaco';
+}
+
+.predict-button:hover {
+	background-color: #5d00ff;
+	color: white;
+}
+
+.loader {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 16px solid #f3f3f3;
+	border-top: 16px solid #3498db;
+	-webkit-animation: spin 2s linear infinite;
+	/* Safari */
+	animation: spin 2s linear infinite;
+	position: absolute;
+	left: 48%;
+}
+
+.gray-back {
+	border-radius: 8px;
+	width: max-content;
+	background-color: #ebf1f8;
+}
+
+.bttn {
+	color: white;
+	font-weight: 600;
+	background-color: #5d00ff;
+}
+
+.bttn:hover {
+	color: white;
+	background-color: #4b01cc;
+}
+
+.login-container {
+	position: relative;
+}
+
+.login-container .login-box {
+	background-color: #fff;
+	height: max-content;
+	width: max-content;
+	position: absolute;
+	padding: 16px 36px;
+	left: -75%;
+	top: 56px;
+	z-index: 999;
+	border-radius: 12px;
+	transition: display 2s ease-out;
+	box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.35);
+}
+
+#wrapper {
+	max-width: 200px;
+	position: absolute;
+	left: 50%;
+}
+
+#article-text {
+	border-radius: 20px;
+	padding: 20px;
+	outline: none;
+}
+
+#result-banner {
+	font-family: 'Monaco';
+	font-weight: 'bold';
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

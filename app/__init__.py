@@ -19,7 +19,7 @@ text_vectorizer = CustomUnpickler( open(f'{current_wd}/app/data/text_vectorizer.
 
 
 app = Flask(__name__, static_url_path="/static")
-app.config.from_object(DevConfig)
+app.config.from_object(ProdConfig)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
